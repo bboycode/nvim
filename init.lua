@@ -78,6 +78,12 @@ vim.o.relativenumber = true
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
+-- CS44 styles
+vim.o.textwidth = 80
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.autoindent = true
+
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
@@ -371,3 +377,5 @@ cmp.setup {
   },
 }
 
+-- File Tree
+vim.keymap.set("n", "<leader>n", "NvimTreeToggle<CR>")
