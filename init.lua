@@ -134,19 +134,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
--- [[ Configure Telescope ]]
--- See `:help telescope` and `:help telescope.setup()`
-require('telescope').setup {
-  defaults = {
-    mappings = {
-      i = {
-        ['<C-u>'] = false,
-        ['<C-d>'] = false,
-      },
-    },
-  },
-}
-
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
@@ -377,5 +364,5 @@ cmp.setup {
   },
 }
 
--- File Tree
-vim.keymap.set("n", "<leader>n", "NvimTreeToggle<CR>")
+--NvimTree
+vim.keymap.set('n', '<leader>t', ':NvimTreeToggle',{})
